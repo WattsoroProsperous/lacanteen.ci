@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Canteen Restaurant - STEAK. FRITES. REPEAT. Elite Kitchen à Abidjan. Ouvert du lundi au dimanche de 12h00 à 23h.">
+    <title>La Canteen | STEAK. FRITES. REPEAT. - Abidjan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">LA CANTEEN</div>
+            <div class="loader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <img src="assets/logo.jpg" alt="La Canteen">
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link" data-text="Accueil">Accueil</a>
+                <a href="#about" class="nav-link" data-text="Notre Histoire">Notre Histoire</a>
+                <a href="#menu" class="nav-link" data-text="Carte">Carte</a>
+                <a href="#gallery" class="nav-link" data-text="Galerie">Galerie</a>
+                <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+            </div>
+            <a href="tel:+2250704868888" class="nav-cta">
+                <span>Réserver</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-links">
+                <a href="#home" class="mobile-link"><span>01</span>Accueil</a>
+                <a href="#about" class="mobile-link"><span>02</span>Notre Histoire</a>
+                <a href="#menu" class="mobile-link"><span>03</span>Carte</a>
+                <a href="#gallery" class="mobile-link"><span>04</span>Galerie</a>
+                <a href="#contact" class="mobile-link"><span>05</span>Contact</a>
+            </div>
+            <div class="mobile-menu-footer">
+                <div class="mobile-menu-contact">
+                    <a href="tel:+2250704868888">+225 07 04 86 88 88</a>
+                </div>
+                <div class="mobile-menu-social">
+                    <a href="https://www.instagram.com/lacanteen_abj/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-bg-overlay"></div>
+            <img src="assets/Le même STEAK. FRITES.jpg" alt="" class="hero-bg-img">
+        </div>
+        <div class="hero-content">
+            <div class="hero-subtitle">
+                <span class="line"></span>
+                <span>Elite Kitchen</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line"><span>STEAK.</span></span>
+                <span class="hero-title-line"><span>FRITES.</span></span>
+                <span class="hero-title-line accent"><span>REPEAT.</span></span>
+            </h1>
+            <p class="hero-desc">Le goût sans compromis, la qualité sans détour</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn-primary">
+                    <span>Découvrir la Carte</span>
+                    <div class="btn-bg"></div>
+                </a>
+                <a href="#about" class="btn-outline">
+                    <span>Notre Histoire</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-info">
+            <div class="hero-info-item">
+                <span class="label">Adresse</span>
+                <span class="value">Abidjan</span>
+            </div>
+            <div class="hero-info-item">
+                <span class="label">Horaires</span>
+                <span class="value">12h00 - 23h00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-inner">
+            <span>Steak Parfait</span>
+            <span class="dot"></span>
+            <span>Frites Maison</span>
+            <span class="dot"></span>
+            <span>Saveurs Authentiques</span>
+            <span class="dot"></span>
+            <span>Elite Kitchen</span>
+            <span class="dot"></span>
+            <span>Steak Parfait</span>
+            <span class="dot"></span>
+            <span>Frites Maison</span>
+            <span class="dot"></span>
+            <span>Saveurs Authentiques</span>
+            <span class="dot"></span>
+            <span>Elite Kitchen</span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-left">
+                    <div class="about-images">
+                        <div class="about-img-wrapper main" data-speed="0.9">
+                            <img src="assets/Le plaisir pur, sans détour.jpg" alt="Steak et Frites">
+                        </div>
+                        <div class="about-img-wrapper secondary" data-speed="1.1">
+                            <img src="assets/Le goût sans compromis - saumon et frites maison.jpg" alt="Saumon et Frites">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <div class="section-tag">
+                        <span class="tag-number">01</span>
+                        <span class="tag-text">Notre Histoire</span>
+                    </div>
+                    <h2 class="about-title">
+                        La Canteen,<br>
+                        <em>l'art du</em><br>
+                        Steak & Frites
+                    </h2>
+                    <div class="about-text">
+                        <p>Chez La Canteen, nous avons fait du steak-frites un art. Chaque pièce de viande est sélectionnée avec soin, chaque frite est préparée maison pour vous offrir une expérience gustative incomparable.</p>
+                        <p>Notre philosophie est simple : des produits de qualité, une cuisson parfaite, et le sourire en prime. STEAK. FRITES. REPEAT.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="100">0</span>
+                            <span class="stat-suffix">%</span>
+                            <span class="stat-label">Frites Maison</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="7">0</span>
+                            <span class="stat-suffix">/7</span>
+                            <span class="stat-label">Jours Ouverts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="2000">0</span>
+                            <span class="stat-suffix">+</span>
+                            <span class="stat-label">Fans sur Instagram</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1"/>
+                            <path d="M30 15v30M15 30h30" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Sur Place</h3>
+                    <p>Une ambiance conviviale pour savourer nos créations</p>
+                </div>
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1"/>
+                            <path d="M20 35l8 8 12-16" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>À Emporter</h3>
+                    <p>Emportez le goût La Canteen chez vous</p>
+                </div>
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1"/>
+                            <path d="M22 25h16M22 30h16M22 35h10" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Qualité Premium</h3>
+                    <p>Des ingrédients sélectionnés avec le plus grand soin</p>
+                </div>
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1"/>
+                            <path d="M30 20v10l6 6" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Livraison</h3>
+                    <p>La qualité La Canteen livrée chez vous</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu-section" id="menu">
+        <div class="menu-header">
+            <div class="container">
+                <div class="section-tag light">
+                    <span class="tag-number">02</span>
+                    <span class="tag-text">Notre Carte</span>
+                </div>
+                <h2 class="menu-title">
+                    Des saveurs qui<br>
+                    <em>font revenir</em>
+                </h2>
+            </div>
+        </div>
+
+        <div class="menu-tabs-wrapper">
+            <div class="container">
+                <div class="menu-tabs">
+                    <button class="menu-tab active" data-tab="signatures">
+                        <span class="tab-number">01</span>
+                        <span class="tab-text">Signatures</span>
+                    </button>
+                    <button class="menu-tab" data-tab="steaks">
+                        <span class="tab-number">02</span>
+                        <span class="tab-text">Steaks</span>
+                    </button>
+                    <button class="menu-tab" data-tab="autres">
+                        <span class="tab-number">03</span>
+                        <span class="tab-text">Autres Plats</span>
+                    </button>
+                    <button class="menu-tab" data-tab="accompagnements">
+                        <span class="tab-number">04</span>
+                        <span class="tab-text">Accompagnements</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-content">
+            <div class="container">
+                <!-- Signatures -->
+                <div class="menu-panel active" id="signatures">
+                    <div class="menu-panel-header">
+                        <h3>Nos Signatures <em>— Le Must</em></h3>
+                        <p>Les incontournables de La Canteen, servis avec nos frites maison</p>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item highlight">
+                            <div class="menu-item-content">
+                                <h4>L'Entrecôte La Canteen</h4>
+                                <p>Notre pièce signature, cuisson parfaite, sauce maison</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Le Saumon Grillé</h4>
+                                <p>Filet de saumon, sauce maison unique, frites croustillantes</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Le Poulet Frit</h4>
+                                <p>Croustillant à l'extérieur, tendre à l'intérieur</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>L'Entre-Dog</h4>
+                                <p>Notre hot-dog revisité façon La Canteen</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Les Nuggets Maison</h4>
+                                <p>Préparés avec amour, accompagnés de nos frites</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steaks -->
+                <div class="menu-panel" id="steaks">
+                    <div class="menu-panel-header">
+                        <h3>Nos Steaks <em>— Cuisson Parfaite</em></h3>
+                        <p>Viandes sélectionnées, cuisson à la demande</p>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item highlight">
+                            <div class="menu-item-content">
+                                <h4>Entrecôte</h4>
+                                <p>La pièce noble par excellence</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Faux-Filet</h4>
+                                <p>Tendre et savoureux</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Bavette</h4>
+                                <p>Pour les amateurs de goût prononcé</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Filet de Boeuf</h4>
+                                <p>La tendreté absolue</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autres Plats -->
+                <div class="menu-panel" id="autres">
+                    <div class="menu-panel-header">
+                        <h3>Autres Délices <em>— Variété</em></h3>
+                        <p>Pour ceux qui veulent explorer</p>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Saumon Grillé</h4>
+                                <p>Filet de saumon, sauce signature</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Poulet Frit Croustillant</h4>
+                                <p>Notre recette secrète</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Wings</h4>
+                                <p>Ailes de poulet épicées ou nature</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Le Duo Foodie</h4>
+                                <p>Pour partager entre amis</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accompagnements -->
+                <div class="menu-panel" id="accompagnements">
+                    <div class="menu-panel-header">
+                        <h3>Accompagnements <em>— Les Essentiels</em></h3>
+                        <p>Pour compléter votre repas</p>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item highlight">
+                            <div class="menu-item-content">
+                                <h4>Frites Maison</h4>
+                                <p>Croustillantes, dorées, irrésistibles</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Salade Fraîche</h4>
+                                <p>Légumes croquants de saison</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-content">
+                                <h4>Sauces Maison</h4>
+                                <p>Poivre, Béarnaise, BBQ, Signature</p>
+                            </div>
+                            <div class="menu-item-price">--<span>F</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-cta">
+                    <a href="assets/menu/cover.jpg" class="btn-download" target="_blank">
+                        <span>Voir la carte complète</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-header">
+            <div class="container">
+                <div class="section-tag">
+                    <span class="tag-number">03</span>
+                    <span class="tag-text">Galerie</span>
+                </div>
+                <h2 class="gallery-title">
+                    L'art du<br>
+                    <em>Steak & Frites</em>
+                </h2>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos>
+                <img src="assets/Le même STEAK. FRITES.jpg" alt="Steak Frites">
+                <div class="gallery-item-overlay">
+                    <span>Steak & Frites</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos>
+                <img src="assets/Le plaisir pur, sans détour.jpg" alt="Le plaisir pur">
+                <div class="gallery-item-overlay">
+                    <span>Le Plaisir Pur</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos>
+                <img src="assets/Le goût sans compromis - saumon et frites maison.jpg" alt="Saumon et Frites">
+                <div class="gallery-item-overlay">
+                    <span>Saumon & Frites</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos>
+                <img src="assets/Le fondant du saumon, la touche unique de notre sauce maison..jpg" alt="Saumon Fondant">
+                <div class="gallery-item-overlay">
+                    <span>Saumon Fondant</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos>
+                <img src="assets/Poulet Frit.jpg" alt="Poulet Frit">
+                <div class="gallery-item-overlay">
+                    <span>Poulet Frit</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos>
+                <img src="assets/Nos nuggets et frites maison sont là pour vous.jpg" alt="Nuggets">
+                <div class="gallery-item-overlay">
+                    <span>Nuggets Maison</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos>
+                <img src="assets/Un classique, mais pas comme les autres.jpg" alt="Un classique">
+                <div class="gallery-item-overlay">
+                    <span>Le Classique</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos>
+                <img src="assets/menu/menu-item.jpg" alt="Menu">
+                <div class="gallery-item-overlay">
+                    <span>Notre Menu</span>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-cta">
+            <a href="https://www.instagram.com/lacanteen_abj/" target="_blank" rel="noopener" class="btn-instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                </svg>
+                <span>@lacanteen_abj</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-bg">
+            <img src="assets/Le même STEAK. FRITES.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-tag light">
+                        <span class="tag-number">04</span>
+                        <span class="tag-text">Contact</span>
+                    </div>
+                    <h2 class="contact-title">
+                        Venez vivre<br>
+                        <em>l'expérience</em>
+                    </h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label">Adresse</span>
+                            <p>Abidjan<br>Côte d'Ivoire</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Horaires</span>
+                            <p>Lundi - Dimanche<br>12h00 - 23h00</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Réservations</span>
+                            <p>
+                                <a href="tel:+2250704868888">+225 07 04 86 88 88</a>
+                            </p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Cuisine</span>
+                            <p>Elite Kitchen</p>
+                        </div>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="tel:+2250704868888" class="btn-primary light">
+                            <span>Appeler maintenant</span>
+                            <div class="btn-bg"></div>
+                        </a>
+                        <a href="https://wa.me/2250704868888" target="_blank" class="btn-whatsapp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3!2d-3.9887826!3d5.2983401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ebfdad33eecb%3A0xf65674476cad96f4!2sLa%20canteen!5e0!3m2!1sfr!2sci!4v1702500000000!5m2!1sfr!2sci"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="La Canteen Restaurant">
+                    </iframe>
+                    <a href="https://www.google.com/maps/place/La+canteen/@5.2983401,-3.9887826,17z" target="_blank" class="map-link">
+                        <span>Ouvrir dans Google Maps</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="assets/logo.jpg" alt="La Canteen Restaurant" class="footer-logo">
+                    <p>STEAK. FRITES. REPEAT.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#home">Accueil</a>
+                    <a href="#about">Notre Histoire</a>
+                    <a href="#menu">Carte</a>
+                    <a href="#gallery">Galerie</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/lacanteen_abj/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 La Canteen Restaurant. Tous droits réservés.</p>
+                <p class="footer-credit">Abidjan — Côte d'Ivoire</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
