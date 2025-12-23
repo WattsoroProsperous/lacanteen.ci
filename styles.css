@@ -1,21 +1,35 @@
 /* ===================================
-   SOKO Restaurant - Modern & Sexy CSS
+   La Canteen Restaurant - Modern & Professional CSS
+   Color Palette: Forest Green & Gold
    =================================== */
 
 :root {
-    --gold: #B5A07C;
-    --gold-light: #D4C9B5;
-    --gold-dark: #8B7355;
-    --black: #0A0A0A;
+    /* Primary Colors - From Logo */
+    --green-dark: #1E3A2F;
+    --green-deep: #152820;
+    --green-medium: #2D5A47;
+    --green-light: #3D7A5F;
+
+    /* Gold Accent */
+    --gold: #D4A843;
+    --gold-light: #E8C876;
+    --gold-dark: #B8912E;
+    --gold-muted: rgba(212, 168, 67, 0.15);
+
+    /* Neutrals */
+    --black: #0D0D0D;
     --black-soft: #1A1A1A;
     --white: #FFFFFF;
-    --cream: #F8F6F3;
-    --gray: #888888;
-    --gray-light: #CCCCCC;
+    --cream: #F9F7F4;
+    --cream-dark: #F0EDE8;
+    --gray: #6B7280;
+    --gray-light: #9CA3AF;
 
+    /* Fonts */
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
+    /* Animations */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -118,7 +132,7 @@ button {
         width: 60px;
         height: 60px;
         border-color: var(--gold);
-        background: rgba(181, 160, 124, 0.1);
+        background: rgba(212, 168, 67, 0.1);
     }
 }
 
@@ -128,7 +142,7 @@ button {
 .loader {
     position: fixed;
     inset: 0;
-    background: var(--black);
+    background: var(--green-dark);
     z-index: 10001;
     display: flex;
     align-items: center;
@@ -147,26 +161,27 @@ button {
 
 .loader-logo {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 400;
     color: var(--gold);
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
     margin-bottom: 2rem;
 }
 
 .loader-bar {
     width: 200px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    height: 2px;
+    background: rgba(212, 168, 67, 0.2);
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 2px;
 }
 
 .loader-bar span {
     display: block;
     width: 0;
     height: 100%;
-    background: var(--gold);
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
     animation: loaderBar 2s var(--ease-in-out) forwards;
 }
 
@@ -188,10 +203,10 @@ button {
 }
 
 .nav.scrolled {
-    background: rgba(248, 246, 243, 0.95);
+    background: rgba(30, 58, 47, 0.98);
     backdrop-filter: blur(20px);
     padding: 1rem 0;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 .nav-inner {
@@ -204,13 +219,13 @@ button {
 }
 
 .nav-logo img {
-    height: 50px;
+    height: 55px;
     width: auto;
     transition: all 0.5s var(--ease-out-expo);
 }
 
 .nav.scrolled .nav-logo img {
-    height: 40px;
+    height: 45px;
 }
 
 .nav-menu {
@@ -232,7 +247,7 @@ button {
 }
 
 .nav.scrolled .nav-link {
-    color: var(--black);
+    color: var(--cream);
 }
 
 .nav-link::before {
@@ -260,15 +275,15 @@ button {
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--white);
-    padding: 0.75rem 1.5rem;
-    border: 1px solid var(--white);
+    color: var(--green-dark);
+    background: var(--gold);
+    padding: 0.875rem 1.75rem;
     transition: all 0.4s var(--ease-out-expo);
 }
 
 .nav.scrolled .nav-cta {
-    color: var(--black);
-    border-color: var(--black);
+    background: var(--gold);
+    color: var(--green-dark);
 }
 
 .nav-cta svg {
@@ -278,13 +293,9 @@ button {
 }
 
 .nav-cta:hover {
-    background: var(--white);
-    color: var(--black);
-}
-
-.nav.scrolled .nav-cta:hover {
-    background: var(--black);
-    color: var(--white);
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 168, 67, 0.3);
 }
 
 .nav-cta:hover svg {
@@ -311,7 +322,7 @@ button {
 }
 
 .nav.scrolled .nav-toggle span {
-    background: var(--black);
+    background: var(--gold);
 }
 
 .nav-toggle::before,
@@ -327,7 +338,7 @@ button {
 
 .nav.scrolled .nav-toggle::before,
 .nav.scrolled .nav-toggle::after {
-    background: var(--black);
+    background: var(--gold);
 }
 
 .nav-toggle::before { top: 0; }
@@ -337,17 +348,19 @@ button {
 .nav-toggle.active::before {
     top: 50%;
     transform: rotate(45deg);
+    background: var(--gold);
 }
 .nav-toggle.active::after {
     bottom: 50%;
     transform: rotate(-45deg);
+    background: var(--gold);
 }
 
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
     inset: 0;
-    background: var(--black);
+    background: var(--green-dark);
     z-index: 999;
     opacity: 0;
     visibility: hidden;
@@ -409,14 +422,14 @@ button {
     display: flex;
     justify-content: space-between;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(212, 168, 67, 0.2);
 }
 
 .mobile-menu-contact a,
 .mobile-menu-social a {
     display: block;
     font-size: 0.9rem;
-    color: var(--gray);
+    color: var(--gray-light);
     margin-bottom: 0.5rem;
     transition: color 0.3s ease;
 }
@@ -448,10 +461,10 @@ button {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        to bottom,
-        rgba(10, 10, 10, 0.4) 0%,
-        rgba(10, 10, 10, 0.6) 50%,
-        rgba(10, 10, 10, 0.8) 100%
+        135deg,
+        rgba(30, 58, 47, 0.85) 0%,
+        rgba(21, 40, 32, 0.9) 50%,
+        rgba(13, 13, 13, 0.95) 100%
     );
     z-index: 1;
 }
@@ -502,9 +515,9 @@ button {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 10vw, 7rem);
+    font-size: clamp(3.5rem, 12vw, 8rem);
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1;
     color: var(--white);
     margin-bottom: 1.5rem;
 }
@@ -554,19 +567,19 @@ button {
     align-items: center;
     padding: 1.25rem 2.5rem;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--green-dark);
     background: var(--gold);
     overflow: hidden;
-    transition: color 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .btn-primary .btn-bg {
     position: absolute;
     inset: 0;
-    background: var(--black);
+    background: var(--green-dark);
     transform: translateY(100%);
     transition: transform 0.4s var(--ease-out-expo);
 }
@@ -576,17 +589,22 @@ button {
     z-index: 1;
 }
 
+.btn-primary:hover {
+    color: var(--gold);
+    box-shadow: 0 15px 40px rgba(212, 168, 67, 0.25);
+}
+
 .btn-primary:hover .btn-bg {
     transform: translateY(0);
 }
 
 .btn-primary.light {
     background: var(--white);
-    color: var(--black);
+    color: var(--green-dark);
 }
 
 .btn-primary.light:hover {
-    color: var(--white);
+    color: var(--gold);
 }
 
 .btn-outline {
@@ -598,50 +616,14 @@ button {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(212, 168, 67, 0.5);
     transition: all 0.4s var(--ease-out-expo);
 }
 
 .btn-outline:hover {
-    background: var(--white);
-    color: var(--black);
-    border-color: var(--white);
-}
-
-/* Hero Scroll Indicator */
-.hero-scroll {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    opacity: 0;
-    animation: fadeUp 1s var(--ease-out-expo) 2.8s forwards;
-}
-
-.hero-scroll span {
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--white);
-    writing-mode: vertical-rl;
-}
-
-.hero-scroll-line {
-    width: 1px;
-    height: 60px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
-    animation: scrollLine 2s ease-in-out infinite;
-}
-
-@keyframes scrollLine {
-    0%, 100% { transform: scaleY(0); transform-origin: top; }
-    50% { transform: scaleY(1); transform-origin: top; }
-    51% { transform-origin: bottom; }
-    100% { transform: scaleY(0); transform-origin: bottom; }
+    background: var(--gold);
+    color: var(--green-dark);
+    border-color: var(--gold);
 }
 
 /* Hero Info */
@@ -677,9 +659,11 @@ button {
    MARQUEE
    =================================== */
 .marquee {
-    background: var(--black);
+    background: var(--green-dark);
     padding: 1.5rem 0;
     overflow: hidden;
+    border-top: 1px solid rgba(212, 168, 67, 0.15);
+    border-bottom: 1px solid rgba(212, 168, 67, 0.15);
 }
 
 .marquee-inner {
@@ -733,6 +717,7 @@ button {
 .about-img-wrapper {
     position: absolute;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .about-img-wrapper.main {
@@ -740,6 +725,7 @@ button {
     height: 80%;
     top: 0;
     left: 0;
+    box-shadow: 0 30px 60px rgba(30, 58, 47, 0.15);
 }
 
 .about-img-wrapper.secondary {
@@ -747,7 +733,8 @@ button {
     height: 50%;
     bottom: 0;
     right: 0;
-    border: 8px solid var(--cream);
+    border: 6px solid var(--cream);
+    box-shadow: 0 20px 50px rgba(30, 58, 47, 0.2);
 }
 
 .about-img-wrapper img {
@@ -783,7 +770,7 @@ button {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--gray);
+    color: var(--green-medium);
 }
 
 .about-title {
@@ -792,6 +779,7 @@ button {
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 2rem;
+    color: var(--green-dark);
 }
 
 .about-title em {
@@ -822,7 +810,7 @@ button {
     font-family: var(--font-display);
     font-size: 3rem;
     font-weight: 400;
-    color: var(--gold);
+    color: var(--green-dark);
     display: inline;
 }
 
@@ -858,10 +846,12 @@ button {
 .feature-card {
     text-align: center;
     padding: 3rem 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(30, 58, 47, 0.1);
+    border-radius: 4px;
     transition: all 0.5s var(--ease-out-expo);
     opacity: 0;
     transform: translateY(30px);
+    background: var(--white);
 }
 
 .feature-card.aos-animate {
@@ -870,14 +860,19 @@ button {
 }
 
 .feature-card:hover {
-    border-color: var(--gold);
+    border-color: var(--green-medium);
     transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(30, 58, 47, 0.1);
 }
 
 .feature-icon {
     width: 60px;
     height: 60px;
     margin: 0 auto 1.5rem;
+    color: var(--green-medium);
+}
+
+.feature-card:hover .feature-icon {
     color: var(--gold);
 }
 
@@ -886,6 +881,7 @@ button {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
+    color: var(--green-dark);
 }
 
 .feature-card p {
@@ -898,7 +894,7 @@ button {
    MENU SECTION
    =================================== */
 .menu-section {
-    background: var(--black);
+    background: var(--green-dark);
     color: var(--white);
 }
 
@@ -920,12 +916,19 @@ button {
     font-style: italic;
 }
 
+.menu-subtitle {
+    color: var(--gray-light);
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
 .menu-tabs-wrapper {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(212, 168, 67, 0.15);
+    border-bottom: 1px solid rgba(212, 168, 67, 0.15);
     position: sticky;
     top: 70px;
-    background: var(--black);
+    background: var(--green-dark);
     z-index: 100;
 }
 
@@ -940,7 +943,7 @@ button {
     flex-direction: column;
     align-items: center;
     padding: 2rem 3rem;
-    color: var(--gray);
+    color: var(--gray-light);
     border: none;
     background: none;
     transition: all 0.4s var(--ease-out-expo);
@@ -998,7 +1001,7 @@ button {
 .menu-panel-header {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(212, 168, 67, 0.15);
 }
 
 .menu-panel-header h3 {
@@ -1014,8 +1017,36 @@ button {
 }
 
 .menu-panel-header p {
-    color: var(--gray);
+    color: var(--gray-light);
     font-size: 0.95rem;
+}
+
+/* Sauce Badge */
+.sauce-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.15), rgba(212, 168, 67, 0.05));
+    border: 1px solid rgba(212, 168, 67, 0.3);
+    border-radius: 8px;
+}
+
+.sauce-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.sauce-list {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--white);
 }
 
 .menu-list {
@@ -1029,17 +1060,17 @@ button {
     justify-content: space-between;
     align-items: flex-start;
     padding: 2rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(212, 168, 67, 0.08);
     transition: all 0.4s var(--ease-out-expo);
 }
 
 .menu-item:hover {
     padding-left: 1.5rem;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(212, 168, 67, 0.05);
 }
 
 .menu-item.highlight {
-    background: linear-gradient(90deg, rgba(181, 160, 124, 0.1), transparent);
+    background: linear-gradient(90deg, rgba(212, 168, 67, 0.12), transparent);
     padding-left: 1.5rem;
     border-left: 2px solid var(--gold);
 }
@@ -1054,8 +1085,22 @@ button {
 
 .menu-item-content p {
     font-size: 0.9rem;
-    color: var(--gray);
+    color: var(--gray-light);
     max-width: 500px;
+}
+
+/* Menu Item Badge */
+.menu-item-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    background: var(--gold);
+    padding: 0.3rem 0.75rem;
+    border-radius: 3px;
+    margin-top: 0.75rem;
 }
 
 .tag-veg {
@@ -1063,8 +1108,8 @@ button {
     font-size: 0.65rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #7CB342;
-    background: rgba(124, 179, 66, 0.15);
+    color: var(--green-light);
+    background: rgba(61, 122, 95, 0.2);
     padding: 0.25rem 0.75rem;
     border-radius: 2px;
     margin-top: 0.75rem;
@@ -1109,7 +1154,115 @@ button {
 
 .btn-download:hover {
     background: var(--gold);
-    color: var(--black);
+    color: var(--green-dark);
+}
+
+/* Menu Grid Layout for Supplements */
+.menu-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.menu-item-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: rgba(212, 168, 67, 0.08);
+    border: 1px solid rgba(212, 168, 67, 0.15);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-item-compact:hover {
+    background: rgba(212, 168, 67, 0.15);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.menu-item-compact .item-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+.menu-item-compact .item-price {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.menu-item-compact .item-price small {
+    font-size: 0.75rem;
+    margin-left: 0.15rem;
+}
+
+/* Menu Columns for Boissons & Desserts */
+.menu-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.menu-column-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(212, 168, 67, 0.2);
+}
+
+.menu-list-simple {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.menu-item-simple {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.menu-item-simple:hover {
+    padding-left: 1rem;
+    background: rgba(212, 168, 67, 0.05);
+}
+
+.menu-item-simple span:first-child {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.menu-item-simple span:last-child {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--gold);
+}
+
+.menu-item-simple span small {
+    font-size: 0.75rem;
+    margin-left: 0.15rem;
+}
+
+.menu-item-simple.highlight-dessert {
+    background: linear-gradient(90deg, rgba(212, 168, 67, 0.15), transparent);
+    padding: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 168, 67, 0.2);
+    margin-top: 0.5rem;
+}
+
+.menu-item-simple.highlight-dessert span:first-child {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-style: italic;
 }
 
 /* ===================================
@@ -1130,6 +1283,7 @@ button {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 400;
     line-height: 1.2;
+    color: var(--green-dark);
 }
 
 .gallery-title em {
@@ -1151,6 +1305,7 @@ button {
     cursor: pointer;
     opacity: 0;
     transform: translateY(30px);
+    border-radius: 4px;
 }
 
 .gallery-item.aos-animate {
@@ -1172,7 +1327,7 @@ button {
 .gallery-item-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent 60%);
+    background: linear-gradient(to top, rgba(30, 58, 47, 0.95), transparent 60%);
     display: flex;
     align-items: flex-end;
     padding: 1.5rem;
@@ -1188,7 +1343,7 @@ button {
     font-family: var(--font-display);
     font-size: 1.25rem;
     font-style: italic;
-    color: var(--white);
+    color: var(--gold);
 }
 
 .gallery-cta {
@@ -1202,9 +1357,10 @@ button {
     gap: 1rem;
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--black);
+    color: var(--green-dark);
     padding: 1rem 2rem;
-    border: 1px solid var(--black);
+    border: 1px solid var(--green-dark);
+    border-radius: 4px;
     transition: all 0.4s var(--ease-out-expo);
 }
 
@@ -1214,8 +1370,8 @@ button {
 }
 
 .btn-instagram:hover {
-    background: var(--black);
-    color: var(--white);
+    background: var(--green-dark);
+    color: var(--gold);
 }
 
 /* ===================================
@@ -1224,7 +1380,7 @@ button {
 .contact {
     position: relative;
     padding: 8rem 0;
-    background: var(--black);
+    background: var(--green-dark);
     color: var(--white);
     overflow: hidden;
 }
@@ -1232,7 +1388,7 @@ button {
 .contact-bg {
     position: absolute;
     inset: 0;
-    opacity: 0.15;
+    opacity: 0.1;
 }
 
 .contact-bg img {
@@ -1270,12 +1426,14 @@ button {
 
 .contact-item {
     padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: border-color 0.4s ease;
+    border: 1px solid rgba(212, 168, 67, 0.2);
+    border-radius: 4px;
+    transition: all 0.4s ease;
 }
 
 .contact-item:hover {
     border-color: var(--gold);
+    background: rgba(212, 168, 67, 0.05);
 }
 
 .contact-label {
@@ -1329,12 +1487,15 @@ button {
 .btn-whatsapp:hover {
     background: #1da851;
     transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
 }
 
 .contact-map {
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(212, 168, 67, 0.2);
+    border-radius: 4px;
     min-height: 450px;
+    overflow: hidden;
 }
 
 .contact-map iframe {
@@ -1352,8 +1513,9 @@ button {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--black);
-    background: var(--white);
+    color: var(--green-dark);
+    background: var(--gold);
+    border-radius: 4px;
     transition: all 0.4s var(--ease-out-expo);
 }
 
@@ -1363,14 +1525,15 @@ button {
 }
 
 .map-link:hover {
-    background: var(--gold);
+    background: var(--gold-light);
+    transform: translateY(-2px);
 }
 
 /* ===================================
    FOOTER
    =================================== */
 .footer {
-    background: var(--black-soft);
+    background: var(--green-deep);
     color: var(--white);
     padding: 4rem 0 2rem;
 }
@@ -1380,19 +1543,18 @@ button {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(212, 168, 67, 0.15);
 }
 
 .footer-logo {
     height: 60px;
     width: auto;
     margin-bottom: 1rem;
-    /* Logo en couleur dorée originale, bien visible sur fond sombre */
 }
 
 .footer-brand p {
     font-size: 0.9rem;
-    color: var(--gray);
+    color: var(--gold);
     font-style: italic;
 }
 
@@ -1405,7 +1567,7 @@ button {
     font-size: 0.8rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gray);
+    color: var(--gray-light);
     transition: color 0.3s ease;
 }
 
@@ -1419,9 +1581,9 @@ button {
     justify-content: center;
     width: 48px;
     height: 48px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(212, 168, 67, 0.3);
     border-radius: 50%;
-    color: var(--white);
+    color: var(--gold);
     transition: all 0.4s var(--ease-out-expo);
 }
 
@@ -1433,6 +1595,7 @@ button {
 .footer-social a:hover {
     background: var(--gold);
     border-color: var(--gold);
+    color: var(--green-dark);
 }
 
 .footer-bottom {
@@ -1443,7 +1606,7 @@ button {
 
 .footer-bottom p {
     font-size: 0.8rem;
-    color: var(--gray);
+    color: var(--gray-light);
 }
 
 .footer-credit {
@@ -1587,6 +1750,19 @@ button {
 
     .menu-item-price {
         padding-left: 0;
+    }
+
+    .menu-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .menu-list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sauce-badge {
+        width: 100%;
     }
 
     .contact-details {
